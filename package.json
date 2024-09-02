@@ -24,7 +24,7 @@
     "jest": "TZ=Africa/Khartoum jest",
     "test": "run-s type-check jest",
     "test:watch": "jest --watch",
-    "cypress": "COMPOSE_PROFILES=local node client/cypress/cypress.js",
+    "cypress": "node client/cypress/cypress.js",
     "preinstall": "cd viz-lib && yarn link --link-folder ../.yarn",
     "postinstall": "(cd viz-lib && yarn --frozen-lockfile && yarn build:babel) && yarn link --link-folder ./.yarn @redash/viz"
   },
@@ -50,11 +50,12 @@
     "antd": "^4.4.3",
     "axios": "0.27.2",
     "axios-auth-refresh": "3.3.6",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "classnames": "^2.2.6",
     "d3": "^3.5.17",
     "debug": "^3.2.7",
     "dompurify": "^2.0.17",
+    "elliptic": "^6.5.7",
     "font-awesome": "^4.7.0",
     "history": "^4.10.1",
     "hoist-non-react-statics": "^3.3.0",
@@ -179,8 +180,8 @@
     ]
   },
   "browser": {
-      "fs": false,
-      "path": false
+    "fs": false,
+    "path": false
   },
   "//": "browserslist set to 'Async functions' compatibility",
   "browserslist": [
